@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-number = 98
-print(f"{int(number)} Battery street")
+import sys
+number = int(sys.argv[1]); print(f"{number} Battery street")
