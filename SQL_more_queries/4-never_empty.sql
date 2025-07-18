@@ -1,5 +1,7 @@
--- 4. creation of a table and its columns
-CREATE TABLE IF NOT EXIST id_not_null (
-	id INT DEFAULT 1,
-	name VARCHAR(256)
+-- A script that create the table force_name on your MySQL server
+
+-- Create the table if it doesn't already exist
+CREATE TABLE IF NOT EXISTS force_name (
+    id INT,
+    name VARCHAR(256) NOT NULL
 );
