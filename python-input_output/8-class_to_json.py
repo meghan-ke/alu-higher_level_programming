@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 This module provides a function to convert an object's attributes
 into a dictionary for JSON serialization, focusing on simple data types.
