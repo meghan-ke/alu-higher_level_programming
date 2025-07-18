@@ -1,4 +1,3 @@
-#!/usr/bin/python3
 """
 This script connects to a MySQL server and creates the database 'hbtn_0c_0'.
 If the database already exists, the script will not fail due to 'IF NOT EXISTS'.
