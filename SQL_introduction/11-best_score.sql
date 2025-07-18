@@ -1,4 +1,4 @@
--- 11. displaying the names and score greater than 10 in the second_table
-SELECT name, score FROM second_table
+-- 11. List records with score >= 10 from second_table ordered by descending score
+SELECT score, name FROM second_table
 WHERE score >= 10
 ORDER BY score DESC;
