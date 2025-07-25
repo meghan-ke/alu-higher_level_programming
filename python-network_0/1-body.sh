@@ -1,2 +1,4 @@
 #!/bin/bash
-curl -s "$URL" | wc -c
+response=$(curl -s -w "%{http_code}" "$1")
+[ "${response: -3}" = "200" ] && echo "${response::-3}"
+
