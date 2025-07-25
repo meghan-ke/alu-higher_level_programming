@@ -1,4 +1,3 @@
 #!/bin/bash
-response=$(curl -s -w "%{http_code}" "$1")
-[ "${response: -3}" = "200" ] && echo "${response::-3}"
-
+# Only display body if status code is 200
+[ "$(curl -s -o body.txt -w "%{http_code}" "$1")" = "200" ] && cat body.txt
