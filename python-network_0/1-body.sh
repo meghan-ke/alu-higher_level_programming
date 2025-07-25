@@ -1,3 +1,3 @@
 #!/bin/bash
-# Only display body if status code is 200
-[ "$(curl -s -o body.txt -w "%{http_code}" "$1")" = "200" ] && cat body.txt
+# Count and display number of redirections
+echo "$(curl -s -L -o /dev/null -w "%{num_redirects}" "$1") redirection"
