@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""Fetches https://alu-intranet.hbtn.io/status using urllib"""
+"""Fetches http://0.0.0.0:5050/status using urllib"""
 
 from urllib import request
 
-url = "https://alu-intranet.hbtn.io/status"
+url = "http://0.0.0.0:5050/status"
 
 with request.urlopen(url) as response:
     body = response.read()
