@@ -1,10 +1,7 @@
 #!/usr/bin/python3
-"""This script fetches the URL http://0.0.0.0:5050/status
-and displays information about the body of the response using urllib.
-"""
+"""Fetches https://alu-intranet.hbtn.io/status using urllib"""
 
 from urllib import request
-
 url = "http://0.0.0.0:5050/status"
 
 with request.urlopen(url) as response:
