@@ -1,22 +1,16 @@
 #!/usr/bin/python3
-"""
-This script sends an HTTP GET request to a specified URL and displays
-the value of the 'X-Request-Id' variable from the response headers.
-
-Usage:
-    ./fetch_request_id.py <URL>
-
-Requirements:
-    - Only urllib and sys modules are used
-    - A with statement is used for the HTTP request
+"""Takes in a URL, sends a request to the URL
+and displays the value of the `X-Request-Id`
+variable found in the header of the response.
 """
 
-from urllib import request
-import sys
+from sys import argv
+from urllib.request import Request, urlopen
 
-url = sys.argv[1]
 
-with request.urlopen(url) as response:
-    headers = response.headers
-    x_request_id = headers.get("X-Request-Id")
-    print(x_request_id)
+if __name__ == "__main__":
+    req = Request(argv[1])
+
+    with urlopen(req) as res:
+        headers = res.info()
+        print(headers.get('X-Request-Id'))
