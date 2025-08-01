@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""Fetches http://0.0.0.0:5050/status using urllib"""
+"""This script fetches the URL http://0.0.0.0:5050/status
+and displays information about the body of the response using urllib.
+"""
 
 from urllib import request
 
